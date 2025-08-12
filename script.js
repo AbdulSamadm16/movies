@@ -77,6 +77,7 @@ return moviesArray
 function renderMoviesRadio(movies){
   let movieList = ""
   const moods = getMoviesArray(movies)
+  .sort((a, b) => a.localeCompare(b));
   for(let mood of moods){
     movieList += `<div class="radio">
     <input type ="radio" id = "${mood}" value = "${mood}" name ="emotions"/>
